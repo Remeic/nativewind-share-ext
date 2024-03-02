@@ -13,9 +13,20 @@
         {
           "origin": "https://n"
         }
-      ]
+      ],
+      "expo-share-extension"
     ],
-    "name": "share-nativewind",
-    "slug": "share-nativewind"
+    "experiments": {
+      "typedRoutes": true
+    },
+    "name": "ehno",
+    "slug": "ehno",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.justgiulio.ehno"
+    },
+    "android": {
+      "package": "dev.justgiulio.ehno"
+    }
   }
 }

@@ -1,20 +1,13 @@
+import { Text } from "@/components/text";
 import { Button } from "@/components/button";
 import { H1, H2 } from "@/components/typography";
-import { Text } from "@/components/text";
-import { Link } from "expo-router";
-import React from "react";
+import { close } from "expo-share-extension";
 import { View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { verifyInstallation } from "nativewind";
 
-export default function Page() {
-  return (
-    <View className="flex flex-1">
-      <Content />
-    </View>
-  );
-}
-
-function Content() {
+// if ShareExtension is your root component, url is available as an initial prop
+export default function ShareExtension({ url }: { url: string }) {
+  verifyInstallation();
   return (
     <View className="flex-1">
       <View className="py-12 md:py-24 lg:py-32 xl:py-48">
@@ -23,7 +16,7 @@ function Content() {
             <H1>Expo share intent</H1>
             <H2>Test</H2>
             <Button>
-              <Text>Default</Text>
+              <Text>Close</Text>
             </Button>
           </View>
         </View>
